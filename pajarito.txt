@@ -1,0 +1,5 @@
+rectangle 10 10 480 480 #ccccee
+cercle 150 150 100 #aaaaaa
+linia 50 250 450 250 #aaaaaa
+linia 50 50 50 450 #aaaaaa
+linia 450 40 450 450 #aaaaaa

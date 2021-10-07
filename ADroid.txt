@@ -1,0 +1,18 @@
+dimensions 320 300
+cercle 166 105 26 #94c147
+rectangle 137 108 58 58 #ffffff
+rectangle 139 111 52 52 #94c147
+cercle 157 96 3 #ffffff
+cercle 173 96 3 #ffffff
+rectangle 126 115 11 31 #94c147
+cercle 132 115 5 #94c147
+cercle 132 147 5 #94c147
+rectangle 195 116 11 31 #94c147
+cercle 201 115 5 #94c147
+cercle 200 147 5 #94c147
+rectangle 174 150 11 31 #94c147
+cercle 180 181 5 #94c147
+rectangle 146 150 11 31 #94c147
+cercle 151 181 5 #94c147
+linia 142 75 164 93 #94c147
+linia 186 75 164 93 #94c147

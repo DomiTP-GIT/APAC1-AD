@@ -1,0 +1,19 @@
+dimensions 320 300
+cercle 140 79 26 #94c147
+rectangle 137 108 58 58 #ffffff
+rectangle 139 111 52 52 #94c147
+cercle 154 93 3 #ffffff
+cercle 170 93 3 #ffffff
+rectangle 126 115 11 31 #94c147
+cercle 127 110 5 #94c147
+cercle 127 142 5 #94c147
+rectangle 195 116 11 31 #94c147
+cercle 196 110 5 #94c147
+cercle 195 142 5 #94c147
+rectangle 174 150 11 31 #94c147
+cercle 175 176 5 #94c147
+rectangle 146 150 11 31 #94c147
+cercle 146 176 5 #94c147
+linia 142 75 164 93 #94c147
+linia 186 75 164 93 #94c147
+cercle 35 35 15 #AAFFCC
