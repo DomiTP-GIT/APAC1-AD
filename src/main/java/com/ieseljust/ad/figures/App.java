@@ -84,7 +84,7 @@ public class App extends Application {
             // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
             System.out.println("\u001B[31m Error de sintaxi. La sintaxi correcta és:\ncercle x y radi color \u001B[0m");
           }
-            break;
+          break;
 
         case "rectangle":
           // Creació d'una figura de la classe rectangle
@@ -106,7 +106,7 @@ public class App extends Application {
             // Si s'ha produït algun error als paràmetres, s'indica un error de sintaxi
             System.out.println("\u001B[31m Error de sintaxi. La sintaxi correcta és:\nrectangle x y llargària altura color \u001B[0m");
           }
-            break;
+          break;
 
         case "linia":
           // Creació d'una figura de la classe rectangle
@@ -129,7 +129,7 @@ public class App extends Application {
             System.out.println("\u001B[31m Error de sintaxi. La sintaxi correcta és:\nlinia x y x2 y2 color \u001B[0m");
             //System.out.println(e);
           }
-            break;
+          break;
 
         case "dimensions":
           // Redimensiona el marc de la imatge

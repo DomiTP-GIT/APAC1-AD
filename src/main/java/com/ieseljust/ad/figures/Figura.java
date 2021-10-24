@@ -3,8 +3,13 @@ package com.ieseljust.ad.figures;
 // Llibreríes per a poder dibuixar 
 
 import javafx.scene.canvas.GraphicsContext;
+import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
-abstract class Figura {
+import java.io.Serializable;
+
+abstract class Figura implements Serializable {
     /* Aquesta classe serà una classe abstracta (amb mètodes abstractes)
        a partir de la qual extendrem la resta de classes de figures geomètriques.
     */
@@ -41,6 +46,10 @@ abstract class Figura {
 
   public abstract void render(GraphicsContext gc); // Per dibuixar la figura al context gràfic especificat
 
+  public abstract String getAsText();
 
+  public abstract JSONObject getAsJSON();
+
+  public abstract Element getAsXML(Document doc);
 }
 

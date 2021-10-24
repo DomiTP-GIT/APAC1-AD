@@ -4,6 +4,11 @@ package com.ieseljust.ad.figures;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import javax.xml.parsers.DocumentBuilderFactory;
 
 // Definim la classe rectangle a partir de la classe figura
 // Heretarem per tant, la posició i el color
@@ -42,5 +47,34 @@ class Rectangle extends Figura {
     //gc.fillOval(this.posicio.getX(), this.posicio.getY(), this.radi*2, this.radi*2);
   }
 
+  @Override
+  public String getAsText() {
+    return "rectangle " + this.posicio.getX() + " " + this.posicio.getY() + " " + this.llarg + " " + this.alt + " " + this.color;
+  }
 
+  @Override
+  public JSONObject getAsJSON() {
+    JSONObject object = new JSONObject();
+    object.put("x", this.posicio.getX());
+    object.put("y", this.posicio.getY());
+    object.put("llarg", this.llarg);
+    object.put("alt", this.alt);
+    object.put("fill", this.color);
+
+    JSONObject rectangle = new JSONObject();
+    rectangle.put("rectangle", object);
+    return rectangle;
+  }
+
+  @Override
+  public Element getAsXML(Document doc) {
+    Element e = doc.createElement("rect");
+    e.setAttribute("fill", this.color);
+    e.setAttribute("height", String.valueOf(this.alt));
+    e.setAttribute("width", String.valueOf(this.llarg));
+    e.setAttribute("x", String.valueOf(this.posicio.getX()));
+    e.setAttribute("y", String.valueOf(this.posicio.getY()));
+
+    return e;
+  }
 }

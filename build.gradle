@@ -21,7 +21,14 @@ dependencies {
     implementation "org.openjfx:javafx-base:14-ea+1:$platform"
     implementation "org.openjfx:javafx-graphics:14-ea+1:$platform"
     implementation "org.openjfx:javafx-controls:14-ea+1:$platform"
-  
+
+//    // https://mvnrepository.com/artifact/org.openjfx/javafx-controls
+//    implementation group: 'org.openjfx', name: 'javafx-controls', version: '18-ea+4'
+//    // https://mvnrepository.com/artifact/org.openjfx/javafx-graphics
+//    implementation group: 'org.openjfx', name: 'javafx-graphics', version: '18-ea+4'
+//    // https://mvnrepository.com/artifact/org.openjfx/javafx-base
+//    implementation group: 'org.openjfx', name: 'javafx-base', version: '18-ea+4'
+
     // https://mvnrepository.com/artifact/org.json/json
     implementation group: 'org.json', name: 'json', version: '20190722'
 

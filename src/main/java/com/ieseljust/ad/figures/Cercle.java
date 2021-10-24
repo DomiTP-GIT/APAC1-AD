@@ -4,6 +4,9 @@ package com.ieseljust.ad.figures;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import org.json.JSONObject;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import java.io.Serializable;
 
@@ -44,6 +47,35 @@ class Cercle extends Figura implements Serializable {
     // per tant, hem de dibuixar un òval. Aquesta figura espera que li indiquem els diàmetres major i menor,
     // pel que caldrà multiplicar per 2 el radi.
     gc.fillOval(this.posicio.getX(), this.posicio.getY(), this.radi * 2, this.radi * 2);
+  }
+
+  @Override
+  public String getAsText() {
+    return "cercle " + this.posicio.getX() + " " + this.posicio.getY() + " " + this.radi + " " + this.color;
+  }
+
+  @Override
+  public JSONObject getAsJSON() {
+    JSONObject object = new JSONObject();
+    object.put("cx", this.posicio.getX());
+    object.put("cy", this.posicio.getY());
+    object.put("r", this.radi);
+    object.put("fill", this.color);
+
+    JSONObject cercle = new JSONObject();
+    cercle.put("cercle", object);
+    return cercle;
+  }
+
+  @Override
+  public Element getAsXML(Document doc) {
+    Element e = doc.createElement("circle");
+    e.setAttribute("cx", String.valueOf(this.posicio.getX()+this.radi));
+    e.setAttribute("cy", String.valueOf(this.posicio.getY()+this.radi));
+    e.setAttribute("fill", this.color);
+    e.setAttribute("r", String.valueOf(this.radi));
+
+    return e;
   }
 
 

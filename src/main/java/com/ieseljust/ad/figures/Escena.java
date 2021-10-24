@@ -8,13 +8,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Escena implements Serializable {
+  //Les figures de l'escena s'emmagatzemen en una llista
+  List<Figura> LlistaFigures;
   // L'escena tindrà unes dimensions.
   // Aquesta valor ens determinaran el marc per dibuixar posteriorment.
   private int tamX;
   private int tamY;
-
-  //Les figures de l'escena s'emmagatzemen en una llista
-  List<Figura> LlistaFigures;
 
   // Aquest objecte ens servirà per validar els colors
   // en format hexadecimal (Ex: #000000)
@@ -118,6 +117,10 @@ class Escena implements Serializable {
     // gc.fillText("text", 100, 100);
 
 
+  }
+
+  public String getDimensionsAsText(){
+    return "dimensions "+this.getX()+" "+this.getY();
   }
 
 
